@@ -1,0 +1,3 @@
+﻿  ServerInit.cpp
+c:\users\s189069\source\repos\clientserverlib\serverassessment\server\server\serverinit.cpp(410): warning C4172: returning address of local variable or temporary: Total
+  Server.vcxproj -> C:\Users\s189069\source\repos\ClientServerLib\ServerAssessment\Server\x64\Debug\Server.lib

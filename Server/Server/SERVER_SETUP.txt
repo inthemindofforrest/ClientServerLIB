@@ -1,0 +1,22 @@
+--------------------------------------------------------------------
+How to setup Server:
+--------------------------------------------------------------------
+
+TUP  - Function that takes in nothing and returns Void
+sTUP - Function that takes in a std::string and returns Void.
+
+
+1) Create a new Server. The server will need to take in three parameters:
+	a) sTUP _ConsoleFunction - Function that should handle Console Commands
+	b) TUP _SendClientFunction - Function that should handle sending information to clients
+	c) sTUP _ProcessPacketFunction - Function that should process all incoming packets
+
+2) Choose 1 of 3 startup functions. One of them needs to be ran to start up the server.
+	a) StartServer(void) - Starts a default server with the current Device IP and Port(9999)
+	b) StartServer(Params) - Starts a server with the IP and port given by Developer
+	c) StartConfigServer(void) - Allows the server owner to type the IP and Port when the server Console is started
+
+3) Update the server using ServerUpdate() which runs the Process Packet function the developer had specified
+
+
+--Any game (Server) Logic that needs to be ran, should be ran beside updating the server.
