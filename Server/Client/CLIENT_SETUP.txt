@@ -1,0 +1,28 @@
+--------------------------------------------------------------------
+How to setup Client:
+--------------------------------------------------------------------
+
+TUP  - Function that takes in nothing and returns Void
+sTUP - Function that takes in a std::string and returns Void.
+
+
+1) Create a new Client. The client will need to take in one parameters:
+	- sTUP _Function - Function that should handle processing packets
+
+2) Choose 1 of 3 startup functions. One of them needs to be ran to start up the server.
+
+	a) StartClient(sTUP) - Starts a default server with the current Device IP and Port(9999), and it will 
+	also run sTUP when packets are proccessed
+
+	b) StartCustomClient(sTUP) - Starts a client with the IP and port given by Developer, and it will 
+	also run sTUP when packets are proccessed
+
+	c) StartCustomClient(sTUP, const char *, int) - Allows the client to type the IP and Port when the 
+	client Console is started. it will also run sTUP when packets are proccessed
+
+3) Update the client using UpdateClient() which runs the Process Packet function the developer had specified
+
+4) When client is ready to close, Disconnect from server! And then call shutdown() to safely make sure all 
+sockets are closed correctly. And to close all open threads run CloseAllThreads().
+
+--Any game (Client) Logic that needs to be ran, should be ran beside updating the client.

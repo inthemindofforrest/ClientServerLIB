@@ -132,6 +132,10 @@
   <ItemGroup>
     <ClInclude Include="ClientInit.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="CLIENT_README.txt" />
+    <Text Include="CLIENT_SETUP.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

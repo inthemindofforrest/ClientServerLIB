@@ -18,5 +18,7 @@ sTUP - Function that takes in a std::string and returns Void.
 
 3) Update the server using ServerUpdate() which runs the Process Packet function the developer had specified
 
+4) When server is ready to close, call shutdown() to safely make sure all sockets are closed correctly. And to close all open threads
+run CloseAllThreads().
 
 --Any game (Server) Logic that needs to be ran, should be ran beside updating the server.

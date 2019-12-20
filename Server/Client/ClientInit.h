@@ -58,8 +58,10 @@ public:
 	std::mutex IsDrawing;
 
 	void StartClient();
+	void StartClient(sTUP _Function);
 	bool StopClient();
 	void StartCustomClient();
+	void StartCustomClient(sTUP _ProcessPacketFunction);
 	void StartCustomClient(const char* _IP, int _Port);
 	void UpdateClient();
 
@@ -75,6 +77,7 @@ public:
 	bool SendPacket(const char* _data, int _Size, int _NumData);
 	bool ForceSendPacket(const char* _data, int _Size, int _NumData);
 	bool ReceivePacket();
+	bool ReceivePacket(sTUP _Function);
 	bool ClientConsole(char* _Message);
 
 	bool CompareAddresses(SOCKADDR_IN _First, SOCKADDR_IN _Second);

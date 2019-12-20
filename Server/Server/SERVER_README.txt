@@ -11,7 +11,7 @@ The Console function takes in a std::string and is able to manipulate the string
 string that is provided and act on it. 
 
 Examples:
-"Help", "ClearSessions", "DeleteObject", "RemoveClient###"
+"Help", "ClearSessions", "DeleteObject", "RemoveClient ###"
 
 Every Command check is done each from on a seperate Thread as the main. This allows the Developer or Server Owner to run commands without the distruption of the main Thread.
 }
